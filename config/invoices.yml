@@ -1,0 +1,10 @@
+prefix: invoices
+routes:
+  - route: /invoices
+    method: POST
+    json: invoices.json
+    response_code: 201
+  - route: /invoices/:id
+    method: GET
+    json: invoices_id.json
+    response_code: 200

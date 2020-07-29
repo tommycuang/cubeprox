@@ -1,0 +1,17 @@
+{
+  "data": {
+    "id": 1,
+    "invoice_no": "AX23DES",
+    "amount": 250,
+    "items": [
+      {
+        "id": 5,
+        "product_name": "Shoes"
+      },
+      {
+        "id": 6,
+        "product_name": "Dress"
+      }
+    ]
+  }
+}

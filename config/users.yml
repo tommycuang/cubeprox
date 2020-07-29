@@ -1,0 +1,10 @@
+prefix: users
+routes:
+  - route: /users
+    method: POST
+    json: users.json
+    response_code: 201
+  - route: /users/:id
+    method: GET
+    json: users_id.json
+    response_code: 200
