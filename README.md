@@ -33,6 +33,12 @@ Cubeprox is a simple web service to serve mock json data with inputed routes and
       .
       .
     ```
+   Notes:
+   - route : standard routes and can handle parameter. Parameter's standard starts with ```:```. Example: ```:id```, ```:type```
+   - rest-method : ```GET```, ```POST```, ```PUT```, ```PATCH```, ```DELETE```
+   - json: json file with extension ```.json```. Example: ```users.json```
+   - response_code: standard response code. Example: ```200```, ```201```, ```403```, etc
+   
 4. Example for the yml file
     ```
     prefix: users
