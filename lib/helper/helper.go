@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/tommycuang/cubeprox"
+	"github.com/tommycuang/cubeprox/entity"
 	"gopkg.in/yaml.v2"
 )
 
@@ -24,10 +24,10 @@ func GetListOfFile(absPath string) []string {
 	return configFilesName
 }
 
-func GetConfigs(absPath string, configFilesName []string) []cubeprox.Config {
-	var configs []cubeprox.Config
+func GetConfigs(absPath string, configFilesName []string) []entity.Config {
+	var configs []entity.Config
 	for _, fileName := range configFilesName {
-		var config cubeprox.Config
+		var config entity.Config
 		file, _ := os.Open(absPath + fileName)
 		defer file.Close()
 		configList, _ := ioutil.ReadAll(file)
@@ -39,11 +39,4 @@ func GetConfigs(absPath string, configFilesName []string) []cubeprox.Config {
 	}
 
 	return configs
-}
-
-func GetJSON(absPath string) string {
-	file, _ := os.Open(absPath)
-	defer file.Close()
-	jsonFile, _ := ioutil.ReadAll(file)
-	return string(jsonFile)
 }
